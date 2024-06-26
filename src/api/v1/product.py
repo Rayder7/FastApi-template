@@ -1,14 +1,14 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from db.session import get_db
-from db.schemas import ProductCreate, ProductResponse
+from db.schemas import ProductResponse
 
 router = APIRouter()
 
 
 @router.post("/products/", response_model=ProductResponse)
 async def create_product(
-    product: ProductCreate,
+    product,
     db: AsyncSession = Depends(get_db),
 ):
     pass

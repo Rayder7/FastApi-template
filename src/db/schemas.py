@@ -19,3 +19,33 @@ class BatchCreate(BaseModel):
     class Config:
         allow_population_by_field_name = True
 
+
+class BatchResponse(BaseModel):
+
+    status_closure: bool
+    task_representation: str
+    line: str
+    shift: str
+    team: str
+    batch_id: int
+    batch_date: date
+    nomenclature: str
+    ekn_code: str
+    rc_identifier: str
+    start_datetime: datetime
+    end_datetime: datetime
+    closed_at: datetime | None
+
+    class Config:
+        orm_mode = True
+
+
+class ProductResponse(BaseModel):
+    unique_code: str
+    batch_id: int
+    batch_date: date
+    is_aggregated: bool
+    aggregated_at: datetime | None
+
+    class Config:
+        orm_mode = True

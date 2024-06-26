@@ -45,8 +45,6 @@ class Product(Base):
     batch_id: Mapped[int] = mapped_column(
         ForeignKey('batches.batch_id', ondelete='CASCADE')
     )
-    batch_date: Mapped[date] = mapped_column(
-        ForeignKey('batches.batch_date', ondelete='CASCADE')
-    )
+    batch_date: Mapped[date]
     is_aggregated: Mapped[bool] = mapped_column(default=False)
     aggregated_at: Mapped[datetime] = mapped_column(nullable=True)

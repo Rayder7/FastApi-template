@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     DB_USER: str = 'postgres'
     DB_PASS: str = 'postgres'
     DB_NAME: str = 'axon'
+    PYTHONPATH: str
 
     @property
     def DATABASE_URL_asyncpg(self):

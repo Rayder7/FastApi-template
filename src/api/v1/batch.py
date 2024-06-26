@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from db.session import get_db
-from db.schemas import BatchCreate, BatchUpdate, BatchResponse
+from db.schemas import BatchCreate, BatchResponse
 
 
 router = APIRouter()
@@ -25,7 +25,7 @@ async def get_batch(batch_id: int, db: AsyncSession = Depends(get_db)):
 @router.patch("/batches/{batch_id}", response_model=BatchResponse)
 async def update_batch(
     batch_id: int,
-    batch_update: BatchUpdate,
+    batch_update,
     db: AsyncSession = Depends(get_db),
 ):
     pass
