@@ -1,5 +1,12 @@
-venv
 .vscode
-.env
 setup.cfg
 __pycache__/
+.idea/
+src/.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.ruff_cache
