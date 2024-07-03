@@ -6,3 +6,4 @@ pydantic
 alembic
 uvicorn
 ruff
+fastapi-users[sqlalchemy]
