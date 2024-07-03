@@ -10,6 +10,7 @@ from api.v1.crud.items import (
     get_all_items,
     create_item,
 )
+from core.config import settings
 from core.models import (
     db_helper,
     Item,
@@ -19,7 +20,9 @@ from core.schemas.item import (
     ItemCreate,
 )
 
+
 router = APIRouter(
+    prefix=settings.api.v1.items,
     tags=['Items'],
 )
 
